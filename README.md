@@ -15,6 +15,8 @@ DataHQ service for email marketing
 
 ## Env Vars
 
+```
 MAILCHIMP_USER=<<MailChimp User Name>>
 MAILCHIMP_SECRET=<<MailChimp API Key>>
 MAILCHIMP_LIST_ID=<<MailChimp Users' List ID>>
+```
