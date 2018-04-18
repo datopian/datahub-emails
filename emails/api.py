@@ -1,3 +1,4 @@
+import logging
 import requests
 
 from .config import mch_user, mch_secret, mch_list_id
@@ -22,4 +23,8 @@ def on_new_user(user_info):
             errors.append(resp.get('detail'))
     except Exception as e:
         errors.append(str(e))
-    return {'success': len(errors) == 0, 'errors': errors}
+
+    if len(errors):
+        logging.error(errors[0])
+        return False
+    return True
