@@ -13,8 +13,8 @@ def read(*paths):
 
 
 # Prepare
-PACKAGE = 'emails'
-NAME = 'dhq-emails'
+PACKAGE = 'datahub_emails'
+NAME = 'datahub-emails'
 INSTALL_REQUIRES = [
     'requests',
 ]
