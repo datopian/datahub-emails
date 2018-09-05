@@ -1,0 +1,32 @@
+sudo:
+  required
+
+dist:
+  trusty
+
+language:
+  python
+
+python:
+  - 3.6
+
+env:
+  global:
+    - TOXENV="py${PYTHON_VERSION//./}"
+
+install:
+  - make install
+  - pip install coveralls
+
+script:
+  - make test
+
+before_deploy:
+  - curl -s https://raw.githubusercontent.com/datahq/deploy/master/apps_travis_script.sh > .travis.sh
+
+deploy:
+  skip_cleanup: true
+  provider: script
+  script: bash .travis.sh trigger datahub-auth
+  on:
+    branch: master
