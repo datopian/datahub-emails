@@ -1,5 +1,5 @@
 # DataHQ emails
-[![Build Status](https://travis-ci.org/datahq/datahub-emails.svg?branch=master)](https://travis-ci.org/datahq/emails)
+[![Build Status](https://travis-ci.org/datahq/datahub-emails.svg?branch=master)](https://travis-ci.org/datahq/datahub-emails)
 
 DataHQ service for email marketing
 
